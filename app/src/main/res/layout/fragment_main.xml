@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.lntorrent.libretorrent.ui.customviews.EmptyRecyclerView
+            android:id="@+id/torrent_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@{@dimen/fab_size + @dimen/fab_margin}"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            android:focusable="true"
+            android:scrollbarStyle="outsideOverlay" /> <!-- Need for padding -->
+
+        <TextView
+            android:id="@+id/empty_view_torrent_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/torrent_list_empty"
+            style="@style/EmptyView"
+            />
+
+        <com.leinardi.android.speeddial.SpeedDialOverlayLayout
+            android:id="@+id/fab_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="?attr/speedDialOverlayColor" />
+
+        <org.lntorrent.libretorrent.ui.customviews.ThemedSpeedDialView
+            android:id="@+id/fab_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="100dp"
+            app:sdMainFabClosedSrc="@drawable/ic_add_36dp"
+            app:sdMainFabAnimationRotateAngle="135"
+            app:sdOverlayLayout="@id/fab_overlay"
+            />
+<!--//Google add Commented-->
+<!--        <com.google.android.gms.ads.AdView-->
+<!--            android:id="@+id/main_adView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            app:adSize="SMART_BANNER"-->
+<!--            app:adUnitId="@string/ad_banner"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
